@@ -5,10 +5,21 @@ spring:
     config:
       server:
         git:
+          #仓库配置
           uri: https://github.com/hzqiuxm/SpringcloudConfig
+          #相对搜索位置，可以多个
           search-paths: respo
+      #分支
       label: master
 
 server:
   port: 8888
 
+eureka:
+  client:
+    service-url:
+      #注册中心地址
+#      defaultZone: http://ha1:8761/eureka/,http://ha2:8771/eureka/
+      defaultZone: http://localhost:8761/eureka/
+encrypt:
+  key: qiuxm
